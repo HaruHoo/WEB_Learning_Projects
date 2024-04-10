@@ -1,0 +1,99 @@
+/* 
+* 给重复多次使用的颜色定义名字 
+* 在根元素root进行定义，后边使用var调用
+*/
+
+:root{
+    --line-border-fill: #3498db;
+    --line-border-empty: #e0e0e0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #a1f1aa;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    text-align: center;
+}
+
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 350px;
+    position: relative;
+}
+
+.progress-container::before{
+    content: "";
+    background-color: var(--line-border-empty);
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.progress{
+    background-color: var(--line-border-fill);
+    position: absolute;
+    height: 4px;
+    width: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+.circle{
+    background-color: white; /* 改变背景颜色 */
+    color: #729e1b;  /* 改变字体颜色 */
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-empty);
+    transition: border-color 0.3s ease;
+}
+
+.circle.active{   /* 表示激活 */
+    border-color: var(--line-border-fill);
+}
+
+.buttons{
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px 30px;
+    border: 0;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.buttons:active{
+    transform: scale(0.98);  /* 点击时缩小到98% */
+}
+
+.buttons:focus{
+    outline: 0;  /* 点击按钮的时候按钮有无边框，直到点别处才没有 */
+}
+
+.buttons:disabled{
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+}
