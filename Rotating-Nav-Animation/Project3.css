@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #333;
+    color: #222;
+}
+
+.container{
+    background-color: #fafafa;
+    width: 100vw;
+    padding: 50px;
+    min-height: 100vh;
+    transform-origin: top left; /* 定义循环转中心 */
+    transition: transform 0.3s linear; /* 旋转动画 */
+}
+
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+
+.buttons{
+    background-color: aquamarine;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.3s ease-in;
+}
+
+.container.show-nav .buttons{
+    transform: rotate(-90deg);
+}
+
+.buttons button{
+    cursor: pointer;
+    position: absolute;  /* 按钮是浮在左上角的圆圈上的，是绝对定位，子绝父相 */
+    top: 50%;
+    left: 50%;
+    color: antiquewhite;
+    background-color: transparent;
+    height: 100px;
+    font-size: 25px;
+}
+
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.buttons button#open{  /* 名为open的按钮 */
+    left: 60%;    
+    border: 0;
+}
+
+.buttons button#close{
+    border: 0;
+    transform-origin: top left; /* 以圆心为旋转中心，向左旋转 */
+    transform: rotate(90deg); /* 向左旋转90度 */
+}
+
+.contents{
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.contents p{
+    color: #333;
+    line-height: 1.5;
+}
+
+.contents small{
+    color: cadetblue;
+    font-style: italic;  /* 设置斜体 */
+}
+
+.contents h2{
+    margin: 20px 0;
+}
+
+.contents img{
+    max-width: 100%;
+}
+
+nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+}
+
+.container.show-nav + nav li{
+    /* + 前后为兄弟关系，当前边的.container.show-nav存在时，只对后边的nav li 进行操作 */
+    transform: translateX(0); /*   */
+    transition-delay: 0.3s;
+}
+
+nav ul{
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+nav li{
+    text-transform: uppercase; /* 将文字改为大写 */
+    margin: 40px 0;
+    color: aquamarine;
+    transform: translateX(-100%);
+    transition-delay: transform 0.3s ease-in 0;
+}
+
+nav ul li i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+nav li:nth-child(2){
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+nav li:nth-child(3){
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
