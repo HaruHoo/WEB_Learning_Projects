@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.bg{
+    background: url("Project5_bg.jpeg") no-repeat center/cover;
+    width: 100vw;
+    height: 100vh;
+    /* width: calc(100vw + 60px); /* 为了不显示白边 */
+    /* height: calc(100vh + 60px); */ 
+    position: absolute;
+    z-index: -1;
+    /* top: -30px;
+    left: -30px; */
+}
+
+.loading_text{
+    font-size: 50px;
+    color: bisque;
+}
