@@ -7,3 +7,4 @@ This repository marks my experience in learning WEB.
 3. Day-03: The website can be rotated for a small angle by user clcking button and the nevigation will be showed on the left.
 4. Day-04: Mimic the browser search button stretch function, realize the user clicks on the button to show or hide the search bar. *This project is mainly self-realized.*
 5. Day-05: Can be used to load the progress, the performance: the progress gradually fades out while the background gradually highlighted.
+6. Day-06: The boxes can be showed up or slided out when user scrolling the mouse cursor. Can be used to show something actively.
