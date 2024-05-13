@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1{
+    margin: 10px;
+}
+
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+    color: #fff;
+    height: 200px;
+    width: 400px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 9px 3px rgba(0, 0, 0, 0.3);
+    transform: translateX(300%);
+    /* 默认第奇数个box向右隐藏 */
+    transition: transform 1s ease;
+    /* 全部box向左向右隐藏时的动画 */
+}
+
+.box h2{
+    font-size: 50px;
+}
+
+.box:nth-of-type(even){ 
+    /* nth-of-type 选择的是兄弟属性，even选择偶数属性 */
+    transform: translateX(-300%); 
+    /* 第偶数个box向左隐藏 */
+}
+
+.box.show{
+    transform: translateX(0);
+    /* 当js中classlist添加show类名时，box就会回来 */
+}
