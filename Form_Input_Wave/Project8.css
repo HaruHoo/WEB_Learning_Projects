@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: steelblue;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 0;
+    border-radius: 5px;
+}
+
+.container h1{
+    text-align: center;
+    color: aliceblue;
+    /* margin-bottom: 30px; */
+    margin-top: 30px;
+}
+
+.container form{
+    margin-bottom: 10px;
+    padding: 20px 40px;
+}
+
+.container a{
+    color: lightblue;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+.container p{
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 30px;
+}
+
+.btn{
+    background-color: lightblue;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    padding: 15px;
+}
+
+.btn:active{
+    transform: scale(0.9);
+}
+
+.form-control{
+    position: relative;
+    width: 300px;
+    margin: 20px 0 40px;
+}
+
+.form-control input{
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    padding: 15px 0;
+    font-size: 18px;
+    color: aliceblue;
+    z-index: 100; /* input部分位于最顶层 */
+}
+
+.form-control label{
+    position: absolute;
+    pointer-events: none;
+    color: aliceblue;
+    top: 15px;
+    pointer-events: none; /*鼠标事件将在捕获或冒泡阶段触发父元素的事件侦听器*/
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+.form-control input:focus,
+.form-control input:valid{
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    color: lightblue;
+    transform: translateY(-30px);
+}
