@@ -10,3 +10,4 @@ This repository marks my experience in learning WEB.
 6. Day-06: The boxes can be showed up or slided out when user scrolling the mouse cursor. Can be used to show something actively.
 7. Day-07: The whole website page is be splited in 2 pages, and the two pages will be scaled while user mouse's hover.
 8. Day-08: Design a fantastic unfolding animation when user login.
+9. Day-09: Sounds player which can be used as web's bgm.
