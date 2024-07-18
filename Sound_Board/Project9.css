@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: rgb(172, 98, 241);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.btn{
+    background-color: rebeccapurple;
+    border-radius: 5px;
+    border: none;
+    margin: 20px;
+    padding: 25px 40px;  /*取两个值时，前后分别为 上下 左右 边距*/
+    cursor: pointer;
+    color: aliceblue;
+    font-family: inherit;
+    font-size: 1.2rem;
+}
+
+.btn:focus{ /* focus是点击，hover是悬浮*/
+    outline: none;
+}
+
+.btn:hover{
+    opacity: 0.7;
+}
