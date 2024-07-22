@@ -12,3 +12,5 @@ This repository marks my experience in learning WEB.
 8. Day-08: Design a fantastic unfolding animation when user login.
 9. Day-09: Sounds player which can be used as web's bgm.
 10. Day-10: Async display random jokes when user click the button.
+11. Day-11: Gain and show the information about KeyCodes from user's keyboard.
+12. Day-12: Expanding Q&A cards.
